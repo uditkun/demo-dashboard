@@ -7,3 +7,24 @@
     @apply font-poppins;
   }
 }
+.fc .fc-button {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 16px;
+}
+.fc .fc-button-primary {
+  @apply bg-pie31 border-white;
+}
+.fc .fc-button-primary:disabled {
+  @apply bg-[#8f92d1] border-white;
+}
+.fc .fc-today-button {
+  margin-left: 1rem !important;
+  @apply bg-[#8f92d1] border-white rounded;
+}
+.fa .fc-button-active {
+  @apply bg-[#424983] !important;
+}
