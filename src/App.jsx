@@ -6,6 +6,10 @@ function App() {
   return (
     <main className="flex">
       <SideBar />
+      <section className="flex flex-col w-full @container">
+        <Topbar />
+        <Dashboard />
+      </section>
     </main>
   );
 }
