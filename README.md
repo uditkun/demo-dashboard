@@ -17,3 +17,5 @@
 - Responsiveness(All components)
 
 - Minor details in components(component above calender, etc)
+
+You can view the live site [here](https://papaya-granita-8634aa.netlify.app).

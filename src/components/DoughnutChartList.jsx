@@ -1,44 +1,7 @@
 import React from "react";
-import { Doughnut } from "react-chartjs-2";
 import { Chart, ArcElement, Tooltip } from "chart.js";
-import { useState } from "react";
-import { useEffect } from "react";
 import DoughnutChart from "./DoughnutChart";
 Chart.register(ArcElement, Tooltip);
-
-const getCenterTextPlugin = (topText, bottomText) => {
-  return {
-    id: "centerTextPlugin",
-    beforeDraw(chart) {
-      const {
-        ctx,
-        chartArea: { width, height },
-      } = chart;
-      ctx.save();
-      ctx.fillStyle = "#001B33";
-      ctx.font = "20px Poppins";
-      (ctx.textAlign = "center"), ctx.fillText(topText, width / 2, height / 2);
-      ctx.font = "10px Poppins";
-      ctx.fillText(bottomText, width / 2, height / 2 + 20);
-    },
-  };
-};
-
-const centerTextPlugin = {
-  id: "centerTextPlugin",
-  beforeDraw(chart) {
-    const {
-      ctx,
-      chartArea: { width, height },
-    } = chart;
-    ctx.save();
-    ctx.fillStyle = "#001B33";
-    ctx.font = "20px Poppins";
-    (ctx.textAlign = "center"), ctx.fillText("87%", width / 2, height / 2);
-    ctx.font = "10px Poppins";
-    ctx.fillText("By MM Team", width / 2, height / 2 + 20);
-  },
-};
 
 const doughnutData = [
   {
