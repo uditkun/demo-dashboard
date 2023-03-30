@@ -41,3 +41,21 @@
   margin-left: 1rem !important;
   @apply bg-[#8f92d1] border-white rounded;
 }
+
+.transition-block {
+  transition: transform 600ms ease 0s;
+}
+
+.corner-cut::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-color: white;
+  border-left: 26px solid white;
+  border-bottom: 26px solid white;
+  border-top: 16px solid white;
+  /* border-right: 27px solid white; */
+  transform: translateX(12px) rotateZ(30deg);
+  width: 0;
+}

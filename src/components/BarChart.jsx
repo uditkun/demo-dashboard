@@ -20,7 +20,7 @@ ChartJS.register(
   Legend
 );
 
-const getHorizontalLinePlugin = (num, color = "red") => {
+const getHorizontalLinePlugin = (num, color = "red", value) => {
   return {
     id: "horizontalLinePlugin",
     beforeDraw(chart) {
@@ -29,9 +29,15 @@ const getHorizontalLinePlugin = (num, color = "red") => {
         chartArea: { width, left, height },
       } = chart;
       const getPercentPos = height - (height / 100) * num + 10;
+      const arrowCircleUp = document.getElementById("arrow-circle-top");
       ctx.save();
       ctx.strokeStyle = color;
+      ctx.setLineDash([5, 10]);
       ctx.strokeRect(left, getPercentPos, width, 0);
+      ctx.fillStyle = color;
+      ctx.font = `11px Poppins`;
+      ctx.fillText("Avg. " + value, width * 1.1, getPercentPos);
+      ctx.drawImage(arrowCircleUp, width * 1.1 + 50, getPercentPos - 8, 15, 15);
       ctx.restore();
     },
   };
@@ -76,6 +82,11 @@ const options = {
           size: 16,
         },
       },
+    },
+  },
+  layout: {
+    padding: {
+      right: 100,
     },
   },
   plugins: {
@@ -184,7 +195,11 @@ const BarChart = () => {
             <span className="font-bold">89</span>
             <span>10%</span>
             <span>
-              <img src="icons/arrow-circle-top.svg" alt="up" />
+              <img
+                id="arrow-circle-top"
+                src="icons/arrow-circle-top.svg"
+                alt="up"
+              />
             </span>
           </div>
         </div>
@@ -203,8 +218,9 @@ const BarChart = () => {
         data={data}
         options={options}
         plugins={[
-          getHorizontalLinePlugin(40, "red"),
-          getHorizontalLinePlugin(60, "blue"),
+          getHorizontalLinePlugin(47, "#5575a2", "45%"),
+          getHorizontalLinePlugin(60, "#e39142", "23%"),
+          getHorizontalLinePlugin(28, "#cf6056", "17%"),
         ]}
       />
     </div>

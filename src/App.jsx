@@ -4,7 +4,7 @@ import Topbar from "./components/Navbar";
 
 function App() {
   return (
-    <main className="flex">
+    <main className="flex overflow-x-scroll">
       <SideBar />
       <section className="flex flex-col w-full @container">
         <Topbar />

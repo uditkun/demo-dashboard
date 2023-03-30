@@ -43,7 +43,7 @@ const Dashboard = () => {
         <BarChart />
       </div>
       <div className="max-w-[545px] flex flex-col gap-5">
-        <div className="flex flex-col">
+        <div className="flex flex-col mt-7 rounded-[20px] border border-shadow1">
           <span className="text-xl font-medium rounded-t-lg bg-[#f6f6fa] px-6 py-2">
             AI-Assisted PM Scheduler
           </span>
