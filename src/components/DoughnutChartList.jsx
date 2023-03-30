@@ -4,8 +4,7 @@ import { Chart, ArcElement, Tooltip } from "chart.js";
 import { useState } from "react";
 import { useEffect } from "react";
 import DoughnutChart from "./DoughnutChart";
-Chart.register(ArcElement);
-Chart.register([Tooltip]);
+Chart.register(ArcElement, Tooltip);
 
 const getCenterTextPlugin = (topText, bottomText) => {
   return {

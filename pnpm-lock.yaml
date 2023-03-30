@@ -3,7 +3,9 @@ lockfileVersion: 5.4
 specifiers:
   '@fullcalendar/core': ^6.1.5
   '@fullcalendar/daygrid': ^6.1.5
+  '@fullcalendar/interaction': ^6.1.5
   '@fullcalendar/react': ^6.1.5
+  '@fullcalendar/timegrid': ^6.1.5
   '@tailwindcss/container-queries': ^0.1.0
   '@types/chart.js': ^2.9.37
   '@types/react': ^18.0.28
@@ -30,7 +32,9 @@ dependencies:
 devDependencies:
   '@fullcalendar/core': 6.1.5
   '@fullcalendar/daygrid': 6.1.5_@fullcalendar+core@6.1.5
+  '@fullcalendar/interaction': 6.1.5_@fullcalendar+core@6.1.5
   '@fullcalendar/react': 6.1.5_fmbwmbvmlpc6j77kvpbehkuyfm
+  '@fullcalendar/timegrid': 6.1.5_@fullcalendar+core@6.1.5
   '@types/chart.js': 2.9.37
   '@types/react': 18.0.29
   '@types/react-dom': 18.0.11
@@ -254,6 +258,14 @@ packages:
       '@fullcalendar/core': 6.1.5
     dev: true
 
+  /@fullcalendar/interaction/6.1.5_@fullcalendar+core@6.1.5:
+    resolution: {integrity: sha512-7U+WsysSlgVSkWqyjLnE6dVKUk2I7sGZN0zcadSfvL2e3KzD30BKgz78p6LRayW2Trtyf/7rZEe1k064ELd0+Q==}
+    peerDependencies:
+      '@fullcalendar/core': ~6.1.5
+    dependencies:
+      '@fullcalendar/core': 6.1.5
+    dev: true
+
   /@fullcalendar/react/6.1.5_fmbwmbvmlpc6j77kvpbehkuyfm:
     resolution: {integrity: sha512-OVQJQhtDAwxHbFk84bm5Y6iGLjGDrrBgr3491JbfnqHUjSaO+T1rNHUvtnot0X4/ZdnoxWr2nKqxPxpmCCL/lw==}
     peerDependencies:
@@ -264,6 +276,15 @@ packages:
       '@fullcalendar/core': 6.1.5
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+    dev: true
+
+  /@fullcalendar/timegrid/6.1.5_@fullcalendar+core@6.1.5:
+    resolution: {integrity: sha512-phofe7XQ+JbejQB9zGqtZOGmPr/vMkfkK5dwPY4rOjxZOG/wspL3aXoSurmXaVP5CIiRWBvX9QPq0UgVJt0j5A==}
+    peerDependencies:
+      '@fullcalendar/core': ~6.1.5
+    dependencies:
+      '@fullcalendar/core': 6.1.5
+      '@fullcalendar/daygrid': 6.1.5_@fullcalendar+core@6.1.5
     dev: true
 
   /@kurkle/color/0.3.2:

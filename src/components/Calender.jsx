@@ -1,8 +1,8 @@
 import React from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-// import timeGridWeek from "@fullcalender/timeGridWeek";
-// import timeGridDay from "@fullcalender/timeGridDay";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
 
 const Calender = () => {
   return (
@@ -13,7 +13,7 @@ const Calender = () => {
         center: "title",
         end: "dayGridMonth,timeGridWeek,timeGridDay",
       }}
-      plugins={[dayGridPlugin]}
+      plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
     />
   );
 };

@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --fc-button-bg-color: #5256b8;
+  --fc-border-color: #fff;
+  --fc-today-bg-color: #bedaf6;
+  --fc-button-active-bg-color: #424983;
+  --fc-button-active-border-color: transparent;
+}
+
 @layer base {
   body {
     @apply font-poppins;
@@ -10,21 +18,26 @@
 .fc .fc-button {
   font-size: 12px;
   text-transform: capitalize;
+  border: 1px solid transparent;
 }
 
 .fc .fc-toolbar-title {
   font-size: 16px;
 }
 .fc .fc-button-primary {
-  @apply bg-pie31 border-white;
+  @apply bg-pie31;
 }
+
 .fc .fc-button-primary:disabled {
+  border-radius: 4px !important;
   @apply bg-[#8f92d1] border-white;
 }
+/* .fc-direction-ltr .fc-button-group > .fc-button:not(:first-child),
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
+  border-radius: 4px;
+} */
+
 .fc .fc-today-button {
   margin-left: 1rem !important;
   @apply bg-[#8f92d1] border-white rounded;
-}
-.fa .fc-button-active {
-  @apply bg-[#424983] !important;
 }

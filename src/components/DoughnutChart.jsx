@@ -1,10 +1,9 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
-import { Chart, ArcElement, Tooltip } from "chart.js";
-Chart.register(ArcElement);
-Chart.register([Tooltip]);
+import { Chart as ChartJS, ArcElement, Tooltip } from "chart.js";
+ChartJS.register(ArcElement, Tooltip);
 
-const getCenterTextPlugin = (topText, bottomText, font = "20px") => {
+const getCenterTextPlugin = (topText, bottomText, font = ["20px", "10px"]) => {
   return {
     id: "centerTextPlugin",
     beforeDraw(chart) {
@@ -14,9 +13,9 @@ const getCenterTextPlugin = (topText, bottomText, font = "20px") => {
       } = chart;
       ctx.save();
       ctx.fillStyle = "#001B33";
-      ctx.font = `${font} Poppins`;
+      ctx.font = `${font[0]} Poppins`;
       (ctx.textAlign = "center"), ctx.fillText(topText, width / 2, height / 2);
-      ctx.font = "10px Poppins";
+      ctx.font = `${font[1]} Poppins`;
       ctx.fillText(bottomText, width / 2, height / 2 + 20);
     },
   };
@@ -24,10 +23,20 @@ const getCenterTextPlugin = (topText, bottomText, font = "20px") => {
 
 const DoughnutChart = ({ data }) => {
   const plugins = [
-    getCenterTextPlugin(data.topText, data.datasets[0].label, data.fontSize),
+    getCenterTextPlugin(
+      data.topText,
+      data.datasets[0].label,
+      data.pluginFontSize
+    ),
   ];
   const options = {
-    cutout: data.cutout ?? 43,
+    reponsive: true,
+    cutout: data.cutout ?? 47,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
     datasets: {
       doughnut: {
         borderWidth: 0,
