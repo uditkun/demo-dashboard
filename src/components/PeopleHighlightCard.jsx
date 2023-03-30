@@ -5,7 +5,7 @@ const PeopleHighlightCard = ({ type, slide }) => {
   return (
     <div
       className="flex flex-col gap-2 transition-block"
-      style={{ transform: `translateX(${-slide * 54}%)` }}
+      style={{ transform: `translateX(-${slide * 106}%)` }}
     >
       <div className="w-[522px] h-[150px] flex basis-full gap-2 justify-between items-center border border-shadow1 bg-white rounded-[20px] p-4">
         {type === "doughnut" ? (

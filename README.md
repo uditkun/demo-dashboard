@@ -10,10 +10,10 @@
 
 - Carousel Effect
 
-- Topbar Component
+- Navbar Component
 
 ⚠️Features to be added
 
-- Responsiveness
+- Responsiveness(All components)
 
-- Minor details in components
+- Minor details in components(component above calender, etc)

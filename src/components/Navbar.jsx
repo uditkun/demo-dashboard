@@ -1,9 +1,9 @@
 import React from "react";
 
-const Topbar = () => {
+const Navbar = () => {
   return (
     <div className="@container flex flex-col justify-between @2xl:flex-row border border-[rgba(14, 37, 57, 0.1)]">
-      <div className="flex px-8 py-5 flex-col justify-between items-center w-full gap-3 @5xl:flex-row @5xl:w-[1108px]">
+      <div className="flex px-8 py-4 flex-col justify-between items-center w-full gap-3 @5xl:flex-row @5xl:w-[1108px]">
         {/* SearchBar */}
         <div className="@5xl:max-w-[378px] w-full relative">
           <input className="w-full p-4 rounded-lg bg-searchBlue" type="text" />
@@ -69,4 +69,4 @@ const Topbar = () => {
   );
 };
 
-export default Topbar;
+export default Navbar;
