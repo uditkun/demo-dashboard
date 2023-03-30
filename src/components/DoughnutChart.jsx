@@ -45,7 +45,7 @@ const DoughnutChart = ({ data }) => {
   };
 
   return (
-    <div className="flex items-center gap-[10px]">
+    <div className="flex items-center max-auto gap-[10px]">
       <div style={{ width: data.doughnutWidth }}>
         <Doughnut data={data} options={options} plugins={plugins} />
       </div>

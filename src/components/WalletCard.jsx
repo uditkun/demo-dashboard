@@ -2,7 +2,7 @@ import React from "react";
 
 const WalletCard = () => {
   return (
-    <div className="flex flex-col gap-3 p-4 items-center max-w-[250px] w-full rounded-[20px] border border-shadow1">
+    <div className="flex flex-col gap-3 p-4 items-center max-w-[250px] w-full min-w-[210px] rounded-[20px] border border-shadow1">
       <div className="flex justify-between w-full">
         <div className="flex flex-col gap-3">
           <span className="text-sm text-textBlack font-medium">My Wallet</span>

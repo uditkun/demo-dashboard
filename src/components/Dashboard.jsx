@@ -35,8 +35,8 @@ const Dashboard = () => {
     ],
   };
   return (
-    <div className="flex gap-4">
-      <div className="max-w-[1108px] flex gap-2 flex-col">
+    <div className="flex gap-4 flex-col items-center 2xl:flex-row 2xl:items-start">
+      <div className="w-full lg:max-w-[1108px] flex flex-col">
         <PeopleHighlight />
         <DoughnutCharts />
         <WalletList />

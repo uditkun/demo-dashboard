@@ -7,7 +7,7 @@ const PeopleHighlight = () => {
   useEffect(() => {
     setInterval(() => {
       setSlide((slide) => {
-        if (slide > 3) return 0;
+        if (slide >= 3) return 0;
         return slide + 1;
       });
     }, 2000);

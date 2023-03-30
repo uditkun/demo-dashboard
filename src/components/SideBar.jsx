@@ -15,7 +15,7 @@ const SideBar = () => {
   const [menuItemActive, setMenuItemActive] = useState(menu[0]);
   // For a production level app, this state value can be set to router query
   return (
-    <div className="max-w-[240px] w-full min-h-screen bg-dashboardBG flex flex-col text-textWhite capitalize">
+    <div className="max-w-[240px] w-full min-h-screen bg-dashboardBG flex flex-col text-textWhite capitalize relative z-50">
       <div className="flex justify-center items-center py-8 mx-auto">
         <img className="w-full h-auto" src="/icons/Logo.svg" alt="logo" />
       </div>
@@ -27,7 +27,9 @@ const SideBar = () => {
               className={`flex gap-2 pt-2 pb-4 pl-[23.33%] hover:cursor-pointer ${
                 menuItemActive === menuItem && "bg-dashboardItem"
               }`}
-              onClick={()=>{setMenuItemActive(menuItem)}}
+              onClick={() => {
+                setMenuItemActive(menuItem);
+              }}
             >
               <span>
                 <img

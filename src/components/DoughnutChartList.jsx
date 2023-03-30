@@ -81,8 +81,8 @@ const doughnutData = [
 
 const DoughnutChartList = () => {
   return (
-    <div className="pl-8 py-7">
-      <div className="flex py-4 px-[20px] rounded-[20px] justify-between gap-2 w-full border border-shadow1">
+    <div className="pl-8 pb-4 pt-0">
+      <div className="flex flex-col gap-7 w-fit mx-auto xl:mx-0 xl:flex-row py-4 px-[20px] rounded-[20px] xl:justify-between xl:gap-2 xl:w-full border border-shadow1">
         {doughnutData.map((data) => {
           return <DoughnutChart key={data.datasets[0].label} data={data} />;
         })}
